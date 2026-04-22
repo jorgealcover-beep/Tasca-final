@@ -1,0 +1,51 @@
+:root{
+    --background-color: rgb(243, 243, 227);
+    --menu-background-color: #5b8c6e;
+    --button-color: rgb(118,69,118);
+    --form-background-color: #fff;
+    --high-priority-color: rgb(245, 93, 93);
+    --medium-priority-color: rgb(240, 240, 113);
+    --low-priority-color: rgb(118, 248, 118);
+    --category-color: #b4b3b3;
+
+}
+
+body{
+    display: flex;
+    flex-direction: row;
+    margin: 0px;
+    background-color: var(--background-color);
+}
+nav{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--menu-background-color);
+    height: 100%;   
+}
+
+nav>p{
+    margin: 1rem;
+    color: white;
+}
+nav>a{
+    margin-left: 2rem;
+    padding: 1rem;
+}
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+form{
+    background-color: var(--form-background-color);
+    margin: 1rem;
+    border-radius: 1rem;
+    padding: 1rem;
+    width: 33%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
