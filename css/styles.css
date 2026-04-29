@@ -45,7 +45,7 @@ main{
     width: 100%;
 }
 
-form{
+.contenidor{
     display: flex;
     flex-direction: column;
     background: var(--form-background-color);
