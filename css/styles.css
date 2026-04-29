@@ -59,6 +59,7 @@ main{
     flex-direction: row;
     width: 100%;
     max-width: 1000px;
+    justify-content: space-between;
 }
 
 button {
@@ -76,4 +77,16 @@ button {
 button:hover {
     transform: translateY(-1px);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+input{
+    flex: 1;
+    padding: 12px;
+    border: 2px solid #dfe6e9;
+    border-radius: 8px;
+    font-size: 1em;
+    transition: border-color 0.3s;
+}
+input:focus {
+    outline: none;
+    border-color: #6a11cb;
 }
