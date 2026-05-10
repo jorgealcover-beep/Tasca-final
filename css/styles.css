@@ -8,7 +8,7 @@
     --low-priority-color: rgb(118, 248, 118);
     --category-color: #b4b3b3;
     --nav-text-color: #fff;
-
+    --box-shadow-color: rgba(0, 0, 0, 0.2);
 }
 
 body{
@@ -30,6 +30,17 @@ nav>p{
     margin: 1rem;
     color: var(--nav-text-color);
 }
+nav>a{
+    text-decoration: none;
+    color: var(--nav-text-color);
+    border-radius: 15px;
+    margin: 5px;
+}
+nav>a.active,nav>a:hover{
+    box-shadow: 0 5px 15px var(--box-shadow-color);
+    background-color: rgb(60, 92, 72);
+}
+
 a{
     margin-left: 1rem;
     padding: 1rem;
@@ -58,7 +69,7 @@ main > section{
     flex-direction: column;
     background: var(--form-background-color);
     border-radius: 15px;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 10px 40px var(--box-shadow-color);
     width: 100%;
     max-width: 500px;
     padding: 30px;
@@ -84,7 +95,7 @@ button {
 
 button:hover {
     transform: translateY(-1px);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 5px 15px var(--box-shadow-color);
 }
 input,select{
     flex: 1;
@@ -108,10 +119,10 @@ li{
     align-items: center;
     padding: 0.5rem;
     border-radius: 15px;
-    box-shadow: #b4b3b3 0px 1px 3px;
+    box-shadow: var(--box-shadow-color) 0px 1px 3px;
 }
 li:hover{
-    box-shadow: #b4b3b3 0px 5px 15px;
+    box-shadow: var(--box-shadow-color) 0px 5px 15px;
 }
 li>div{
     margin-right: 1rem;
