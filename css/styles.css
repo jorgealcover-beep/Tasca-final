@@ -99,3 +99,28 @@ input:focus, select:focus {
     outline: none;
     border-color: var(--button-color);
 }
+.deleteButton {
+    background-color: rgb(245, 93, 93);
+}
+li{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    padding: 0.5rem;
+    border-radius: 15px;
+    box-shadow: #b4b3b3 0px 1px 3px;
+}
+li:hover{
+    box-shadow: #b4b3b3 0px 5px 15px;
+}
+li>div{
+    margin-right: 1rem;
+    border-radius: 50%;
+}
+li>button{
+    margin-left: auto;
+}
+#colorCategoria{
+   flex: none;
+   padding: 0;
+}
