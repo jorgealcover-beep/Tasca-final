@@ -47,4 +47,25 @@ function carregarTasques() {
     }
     });     
 };
+
+document.getElementById("fetchTasques").addEventListener("submit", async(event) => {
+    event.preventDefault();
+    const nomArxiu = document.getElementById("nomArxiu").value;
+    if (nomArxiu === "") {
+        event.preventDefault();
+        alert("El nom del arxiu no pot estar buit.");
+    }
+    try {
+        const resposta = await fetch(`dades/${nomArxiu}`);
+        const tasquesImportades = await resposta.json();
+        let tasques = JSON.parse(localStorage.getItem("tasques")) || [];
+        tasques = tasques.concat(tasquesImportades);
+        localStorage.setItem("tasques", JSON.stringify(tasques));
+        carregarTasques();
+        alert("Tasques importades correctament.");
+    } catch (error) {
+        alert("Error al importar les tasques: " + error.message);
+    }
+});
+
 carregarTasques();
