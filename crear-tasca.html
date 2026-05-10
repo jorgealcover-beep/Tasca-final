@@ -18,7 +18,7 @@
 
     <main>
         <h1>Crear Nova Tasca</h1>
-        <form action="imput" class="contenidor">
+        <form id="crearTasca" class="contenidor">
             <label for="titolTasca">Títol:</label>
             <input type="text" id="titolTasca" name="titol">
             <label for="descripcioTasca">Descripció:</label>
@@ -28,9 +28,14 @@
             <label for="categoriaTasca">Categoria:</label>
             <select name="categoria" id="categoriaTasca"></select>
             <label for="prioritatTasca">Prioritat</label>
-            <select name="prioritat" id="prioritatTasca"></select>
+            <select name="prioritat" id="prioritatTasca">
+                <option value="alta">Alta</option>
+                <option value="mitjana">Mitjana</option>
+                <option value="baixa">Baixa</option>
+            </select>
             <button >Crear Tasca</button>
         </form>
     </main>
+    <script src="script/tasques.js"></script>
 </body>
 </html>
