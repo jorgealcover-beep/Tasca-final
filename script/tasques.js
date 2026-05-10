@@ -30,7 +30,8 @@ document.getElementById("crearTasca").addEventListener("submit", function(event)
         descripcio: descripcio,
         categoria: categoria,
         prioritat: prioritat,
-        dataCreacio: dataCreacio
+        dataCreacio: dataCreacio,
+        realitzada: false
     };
     let tasques = JSON.parse(localStorage.getItem("tasques")) || [];
     tasques.push(tasca);
