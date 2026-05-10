@@ -25,15 +25,19 @@ document.getElementById("crearTasca").addEventListener("submit", function(event)
     } else {
         alert("Tasca creada correctament.");
     }
+
+    let tasques = JSON.parse(localStorage.getItem("tasques")) || [];
+    const taskId = "task-" + String(tasques.length).padStart(3, '0');
+
     const tasca = {
+        id: taskId,
         titol: titol,
         descripcio: descripcio,
         categoria: categoria,
         prioritat: prioritat,
-        dataCreacio: dataCreacio,
+        data: dataCreacio,
         realitzada: false
     };
-    let tasques = JSON.parse(localStorage.getItem("tasques")) || [];
     tasques.push(tasca);
     localStorage.setItem("tasques", JSON.stringify(tasques));
 });
